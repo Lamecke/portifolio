@@ -9,13 +9,25 @@ const Header = () => {
       <h1 className="name-user">Lamecke Bruno</h1>
       <ul className="menu-list">
         <li>
-          <FaLinkedin className="icon" />
+          <a
+            href="https://www.linkedin.com/in/lamecke-bruno-846529211"
+            className="no-decoration"
+          >
+            <FaLinkedin className="icon" />
+          </a>
         </li>
         <li>
-          <FaGithubSquare className="icon" />
+          <a href="https://github.com/Lamecke/" className="no-decoration">
+            <FaGithubSquare className="icon" />
+          </a>
         </li>
         <li>
-          <FaSquareInstagram className="icon" />
+          <a
+            href="https://www.instagram.com/lameckebruno/"
+            className="no-decoration"
+          >
+            <FaSquareInstagram className="icon" />
+          </a>
         </li>
       </ul>
     </header>
