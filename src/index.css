@@ -1,12 +1,19 @@
+:root {
+  --primary: #1a1a1a;
+  --secondary: #ffffff;
+}
+
 * {
-  margin: 0;
+  box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
   user-select: none;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  margin: 0;
+  background-color: var(--primary);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -18,87 +25,385 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-#component-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 40rem;
-  background-size: cover;
-  background-color: #1a1a1a;
-  color: #ffffff;
+
+/* Layout
+/* Mobile (até 480px) */
+@media (max-width: 480px) {
+  #component-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+
+    .menu-list {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .icon {
+      width: 2rem;
+      height: 2rem;
+      color: var(--secondary);
+    }
+  }
+
+  #component-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 1rem;
+
+    img {
+      max-width: 60%;
+      border-radius: 50%;
+      padding: 1rem;
+    }
+  }
+
+  #component-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+    background-color: var(--secondary);
+
+    #skill {
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      gap: 2rem;
+    }
+  }
+  #component-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+    color: var(--secondary);
+  }
+  #component-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    background-size: cover;
+    background-color: var(--secondary);
+    color: var(--primary);
+    text-align: center;
+  }
 }
-#component-about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40rem;
-  background-size: cover;
-  background-color: #262626;
-  color: #ffffff;
+
+/* Mobile médio (até 767px) */
+@media (max-width: 767px) {
+  #component-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    color: var(--secondary);
+
+    .menu-list {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .icon {
+      width: 2rem;
+      height: 2rem;
+      color: var(--secondary);
+    }
+  }
+
+  #component-about {
+    text-align: center;
+    color: var(--secondary);
+
+    img {
+      max-width: 60%;
+      border-radius: 50%;
+    }
+  }
+
+  #component-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+    background-color: var(--secondary);
+    color: var(--primary);
+
+    #skill {
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      gap: 2rem;
+    }
+  }
+  #component-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+    color: var(--secondary);
+  }
+  #component-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    background-size: cover;
+    background-color: var(--secondary);
+    color: var(--primary);
+    text-align: center;
+  }
 }
-#component-skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 20rem;
-  background-size: cover;
-  background-color: #f5f5f5;
-  color: #262626;
+
+/* Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #component-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    background-color: var(--primary);
+    color: var(--secondary);
+
+    .menu-list {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .icon {
+      width: 2rem;
+      height: 2rem;
+      color: var(--secondary);
+    }
+  }
+
+  #component-about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 20rem;
+    background-color: var(--primary);
+    color: var(--secondary);
+
+    img {
+      max-width: 60%;
+      border-radius: 50%;
+      padding: 1rem;
+    }
+  }
+
+  #component-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-size: x-large;
+
+    #skill {
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      gap: 5rem;
+    }
+  }
+  #component-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-size: x-large;
+  }
+  #component-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    background-size: cover;
+    background-color: var(--secondary);
+    color: var(--primary);
+    text-align: center;
+  }
 }
-#component-projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 40rem;
-  background-size: cover;
-  background-color: #f5f5f5;
-  color: #262626;
+
+/* Laptops pequenos (1025px - 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #component-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    background-color: var(--primary);
+    color: var(--secondary);
+
+    .menu-list {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .icon {
+      width: 2rem;
+      height: 2rem;
+      color: var(--secondary);
+    }
+  }
+
+  #component-about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 20rem;
+    background-color: var(--primary);
+    color: var(--secondary);
+
+    img {
+      max-width: 60%;
+      border-radius: 50%;
+      padding: 1rem;
+    }
+  }
+
+  #component-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-size: x-large;
+
+    #skill {
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      gap: 5rem;
+    }
+  }
+  #component-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-size: x-large;
+  }
+  #component-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    background-size: cover;
+    background-color: var(--secondary);
+    color: var(--primary);
+    text-align: center;
+  }
 }
-#component-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 10rem;
-  background-size: cover;
-  background-color: #f5f5f5;
-  color: #262626;
-  text-align: center;
-}
-#profile-image > img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-#about {
-  padding: 4rem;
-}
-.menu-list {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem;
-}
-.icon {
-  width: 2rem;
-  height: 2rem;
-  text-decoration: none;
-  color: white;
-}
-#skill {
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  gap: 2rem;
-}
-#frontend {
-  text-align: center;
-}
-#backend {
-  text-align: center;
+
+/* Desktops grandes (1441px e acima) */
+@media (min-width: 1441px) {
+  #component-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    background-color: var(--primary);
+    color: var(--secondary);
+
+    .menu-list {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .icon {
+      width: 2rem;
+      height: 2rem;
+      color: var(--secondary);
+    }
+  }
+
+  #component-about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 1rem;
+
+    img {
+      max-width: 60%;
+      border-radius: 50%;
+      padding: 1rem;
+    }
+  }
+
+  #component-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-size: x-large;
+
+    #skill {
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      gap: 5rem;
+    }
+  }
+  #component-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-size: x-large;
+  }
+  #component-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    background-size: cover;
+    background-color: var(--secondary);
+    color: var(--primary);
+    text-align: center;
+  }
 }
